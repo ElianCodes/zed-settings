@@ -8,12 +8,16 @@
 // from the command palette or from `Zed` application menu.
 {
   "project_panel": {
+    "button": true,
+    "default_width": 240,
     "dock": "right"
   },
   "vim_mode": true,
   "vim": {
-    "relative_line_numbers": true
+    "relative_line_numbers": true,
+    "toggle_relative_line_numbers": true
   },
+  "format_on_save": "language_server",
   "autosave": "on_focus_change",
   "auto_update": true,
   "title_bar": {
@@ -22,27 +26,35 @@
     "show_user_picture": false
   },
   "base_keymap": "VSCode",
-  "buffer_font_size": 15,
-  "search.exclude": ["vendor/**", "node_modules/**", "storage/**"],
-  "formatter": "auto",
-  "language_overrides": {
-    "Vue": {
-      "language_server": {
-        "name": "volar"
-      },
-      "format_on_save": true
-    },
+  "jsx_tag_auto_close": {
+    "enabled": true
+  },
+  "languages": {
     "PHP": {
-      "language_server": {
-        "name": "intelephense"
-      },
-      "format_on_save": true
+      "format_on_save": "language_server"
     }
   },
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    },
+    "cargo": null
+  },
+  "buffer_font_size": 15,
+  "search.exclude": [
+    "vendor/**",
+    "node_modules/**"
+  ],
+  "formatter": "auto",
   "lsp": {
-    "intelephense": {
+    "ancor": {
       "initialization_options": {
-        "storagePath": "~/.intelephense",
+        "storagePath": "~/.ancor",
         "licenceKey": null,
         "clearCache": false
       }
@@ -55,7 +67,7 @@
   },
   "theme": {
     "mode": "dark",
-    "dark": "Catppuccin Macchiato",
-    "light": "Catppuccin Latte"
+    "dark": "Catppuccin Espresso (Blur)",
+    "light": "Catppuccin Latte (Blur)"
   }
 }
